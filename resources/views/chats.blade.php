@@ -118,7 +118,6 @@
                 // document.getElementById("chats").innerHTML += "<li class='clearfix'><div class='message-data'><span class='message-data-time' style='font-size: 15px;'>{{date('d-m-Y  H:i:s')}}</span></div><div class='message my-message' style='background-color:lightcoral;'>"+message.data+"</div></li>";
                 document.getElementById("chats").innerHTML += "<li class='clearfix'><div class='message-data'><span class='message-data-time' style='font-size: 15px;''><b>"+message.sender_name+"</b></span></div><div class='message my-message' style='background-color:lightcoral;''>"+message.data+"</div><div class='mt-3'><span class='message-data-time'>{{now()->diffForHumans()}}</span></div></li>  ";
                 objDiv.scrollTop = objDiv.scrollHeight;
-                // document.getElementById("chats").innerHTML += "<strong>"+message.sender_name+" : </strong><label>"+message.data+"</label><br><br>";
             });
 
         $( "#send_message" ).click(function() {
@@ -131,7 +130,6 @@
             },function(data){
                     $('#chats').append("<li class='clearfix'><div class='message-data text-right'><span class='message-data-time' style='font-size: 15px;'><b>You</b></span></div><div class='message other-message float-right' style='background-color:skyblue;'>"+message+"</div><br><br><br><div class='float-right'><span class='message-data-time'>{{now()->diffForHumans()}}</span></div></li>")
                     objDiv.scrollTop = objDiv.scrollHeight;
-                    // $("#chats").append("<strong>"+sender_name+" : </strong><label>"+message+"</label><br><br>");
             }).catch(function(error){
                 console.log(error);
             });
